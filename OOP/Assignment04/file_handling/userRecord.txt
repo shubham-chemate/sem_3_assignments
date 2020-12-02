@@ -1,0 +1,12 @@
+User id: 0
+Name: Lanson
+Email: lanson.gray@hotmail.com
+
+User id: 1
+Name: Marigrane
+Email: mari.lasi@gmail.com
+
+User id: 2
+Name: Tom
+Email: tom.leinghton@mit.edu
+

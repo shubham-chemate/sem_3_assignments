@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1603349975 source:e:\college assignments\oop\file_handling\main.cpp
+	<iostream>
+	<fstream>
+
+1606224398 source:e:\college assignments\oop\assignment04\file_handling\main.cpp
+	<iostream>
+	<string>
+
