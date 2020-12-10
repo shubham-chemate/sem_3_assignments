@@ -1,10 +1,11 @@
+// Roll No: 21118
+
 // In any language program mostly syntax error occurs due to
 // unbalancing delimiter such as (),{},[]. Write C++ program
 // using stack to check whether given expression is well parenthesized
 // or not.
 
 #include <iostream>
-#include <stack>
 #include <string>
 
 using namespace std;
@@ -34,6 +35,9 @@ public:
 	bool isEmpty() {
 		return top == -1;
 	}
+	bool isFull() {
+		return (top == D);
+	}
 	char Top() {
 		if (top >= 0)
 			return arr[top];
@@ -42,66 +46,73 @@ public:
 	}
 };
 
-//==============================================
-
-
 //========== Valid Parentheses Code ============
 
-bool isOpening(char ch) {
-	return (ch == '(' ||
-	        ch == '[' ||
-	        ch == '{');
-}
-
-bool isClosing(char ch) {
-	return (ch == ')' ||
-	        ch == ']' ||
-	        ch == '}');
-}
-
-bool areMatching(char open, char close) {
-	return ((open == '(' && close == ')') ||
-	        (open == '[' && close == ']') ||
-	        (open == '{' && close == '}'));
-}
-
-bool checkParen(string exp) {
-	Stack stk;
-
-	int n = exp.length();
-	for (int i = 0; i < n; i++) {
-		if (isOpening(exp[i])) {
-			stk.Push(exp[i]);
-		}
-		else if (isClosing(exp[i])) {
-			if (stk.isEmpty())
-				return false;
-			char open = stk.Top();
-			stk.Pop();
-			if (!areMatching(open, exp[i]))
-				return false;
-		}
+class Expression {
+private:
+	string exp;
+	bool isOpening(char ch) {
+		return (ch == '(' ||
+	        	ch == '[' ||
+	        	ch == '{');
 	}
 
-	if (!stk.isEmpty())
-		return false;
-	else
-		return true;
-}
+	bool isClosing(char ch) {
+		return (ch == ')' ||
+		        ch == ']' ||
+		        ch == '}');
+	}
 
-// ================================================
+	bool areMatching(char open, char close) {
+		return ((open == '(' && close == ')') ||
+		        (open == '[' && close == ']') ||
+		        (open == '{' && close == '}'));
+	}
+public:
+	Expression(string exp = "") {
+		this->exp = exp;
+	}
+
+	void getInput() {
+		cout << "Enter Expression: "; 
+		cin >> exp;
+	}
+
+	bool checkParen() {
+		Stack stk;
+
+		int n = exp.length();
+		for (int i = 0; i < n; i++) {
+			if (isOpening(exp[i])) {
+				stk.Push(exp[i]);
+			}
+			else if (isClosing(exp[i])) {
+				if (stk.isEmpty())
+					return false;
+				char open = stk.Top();
+				stk.Pop();
+				if (!areMatching(open, exp[i]))
+					return false;
+			}
+		}
+
+		if (!stk.isEmpty())
+			return false;
+		else
+			return true;
+	}
+};
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input1.txt", "r", stdin);
-	freopen("output1.txt", "w", stdout);
-#endif
 
-	string exp; cin >> exp;
+	Expression* exp = new Expression();
+	exp->getInput();
 
-	checkParen(exp) ?
+	exp->checkParen() ?
 	cout << "Balanced\n" :
 	     cout << "Not Balanced\n";
+
+	delete exp;
 
 	return 0;
 }

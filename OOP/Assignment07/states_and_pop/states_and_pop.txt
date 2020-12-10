@@ -1,0 +1,36 @@
+Andhra Pradesh 49,576,777
+Arunachal Pradesh 1,383,727
+Assam 31,205,576
+Bihar 104,099,452
+Chhattisgarh 25,545,198
+Goa 1,458,545
+Gujarat 60,439,692
+Haryana 25,351,462
+Himachal Pradesh 6,864,602	
+Jammu and Kashmir 12,258,433
+Jharkhand 32,988,134
+Karnataka 61,095,297
+Kerala 33,406,061
+Madhya Pradesh 72,626,809
+Maharashtra 112,374,333
+Manipur 2,855,794
+Meghalaya 2,966,889
+Mizoram 1,097,206
+Nagaland 1,978,502
+Odisha 41,974,218
+Punjab 27,743,338
+Rajasthan 68,548,437
+Sikkim 610,577
+Tamil Nadu 72,147,030
+Telangana 35,004,000
+Tripura 3,673,917
+Uttarakhand 10,086,292
+Uttar Pradesh 199,812,341
+West Bengal 91,276,115
+Andaman and Nicobar Islands 380,581
+Chandigarh 1,055,450
+Dadra and Nagar Haveli 586,956
+Daman and Diu 586,956
+Delhi 16,787,941
+Lakshadweep 64,473
+Puducherry 1,247,953
