@@ -10,7 +10,7 @@
 
 using namespace std;
 
-const int D = 100;
+const int D = 100; // size of stack
 
 //============= character stack ===================
 class Stack {

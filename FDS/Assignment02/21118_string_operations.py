@@ -1,7 +1,3 @@
-# DS Assignment 02 : Operations on String
-# Name : Shubham Chemate
-# Roll Number : 21118
-
 class String():
 
     # constructor function, it takes string as optional argument
